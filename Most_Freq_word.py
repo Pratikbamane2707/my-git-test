@@ -4,6 +4,12 @@ dictt ={}
 with open(file,'r') as file:
     content = file.read()
     content=content.lower()
+    punch = "!?.,;:'\"-()[]{}<>@#$%^&*_+=~`|\\"
+    cln_txt=''
+    for i in content:
+        if i not in punch:
+            cln_txt+=i
+    content=cln_txt
     for i in content.split(' '):
         if i.lower() not in dictt:
             dictt[i]=1
