@@ -1,7 +1,8 @@
+import sys
 print("Enter the choice in between 1 to 4 \n 1-add \n 2-Sub \n 3-multiply \n 4-divide ")
-choice = int(input('Your choice:'))
-num1=float(input('Enter the first number -- '))
-num2=float(input('Enter the second number -- '))
+choice = int(sys.argv[1])
+num1=float(sys.argv[2])
+num2=float(sys.argv[3])
 
 if choice==1:
     print(f'The addition of {num1} and {num2} is {num1+num2}')
