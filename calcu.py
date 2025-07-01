@@ -1,6 +1,6 @@
 import sys
 print("Enter the choice in between 1 to 4 \n 1-add \n 2-Sub \n 3-multiply \n 4-divide ")
-choice = int(sys.argv[0])
+choice = int(sys.argv[1])
 num1=float(sys.argv[1])
 num2=float(sys.argv[2])
 
