@@ -1,4 +1,6 @@
-file = input('Enter file name or path:')
+import sys
+
+file = str(sys.argv[1])
 
 dictt ={}
 with open(file,'r') as file:
