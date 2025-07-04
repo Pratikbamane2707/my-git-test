@@ -1,4 +1,5 @@
 import sys
+import re
 
 file = str(sys.argv[1])
 
@@ -12,12 +13,13 @@ with open(file,'r') as file:
         if i not in punch:
             cln_txt+=i
     content=cln_txt
-    for i in content.split(' '):
+    print(content)
+    for i in re.split('[ \n]',content):
         if i.lower() not in dictt:
             dictt[i]=1
         else:
             dictt[i]+=1
-
+print(dictt)
 def find_MaxKey(dictt):
     max_val=max(dictt.values())
     for i in dictt.items():
